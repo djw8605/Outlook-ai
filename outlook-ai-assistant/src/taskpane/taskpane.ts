@@ -7,7 +7,6 @@ import {
   getEmailSender,
   getDraftBody,
   setDraftBody,
-  insertReply,
 } from "../lib/outlook-helper";
 
 // ─── Constants ────────────────────────────────────────────────────────────────

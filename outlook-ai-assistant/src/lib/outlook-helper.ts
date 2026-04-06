@@ -94,12 +94,16 @@ export function insertReply(text: string): Promise<void> {
       reject(new Error("No compose item is currently open."));
       return;
     }
-    item.body.setAsync(text, { coercionType: Office.CoercionType.Text }, (result) => {
-      if (result.status === Office.AsyncResultStatus.Succeeded) {
-        resolve();
-      } else {
-        reject(new Error(result.error.message));
+    item.body.setSelectedDataAsync(
+      text,
+      { coercionType: Office.CoercionType.Text },
+      (result) => {
+        if (result.status === Office.AsyncResultStatus.Succeeded) {
+          resolve();
+        } else {
+          reject(new Error(result.error.message));
+        }
       }
-    });
+    );
   });
 }
