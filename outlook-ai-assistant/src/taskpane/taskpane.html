@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Email Assistant</title>
+    <!-- Office.js must be loaded from the CDN -->
+    <script
+      type="text/javascript"
+      src="https://appsforoffice.microsoft.com/lib/1.1/hosted/office.js"
+    ></script>
+  </head>
+  <body>
+    <!-- Settings toggle -->
+    <section id="settings-section">
+      <button class="settings-toggle" id="toggle-settings">⚙ Settings</button>
+
+      <div id="settings-panel" class="hidden">
+        <div class="form-group">
+          <label for="api-key">API Key</label>
+          <input
+            type="password"
+            id="api-key"
+            placeholder="sk-..."
+            autocomplete="off"
+          />
+        </div>
+        <div class="form-group">
+          <label for="base-url">Base URL</label>
+          <input
+            type="text"
+            id="base-url"
+            placeholder="https://api.openai.com/v1"
+          />
+        </div>
+        <div class="form-group">
+          <label for="model">Model</label>
+          <input
+            type="text"
+            id="model"
+            placeholder="gpt-4o"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Action buttons -->
+    <section id="actions-section">
+      <h2>Actions</h2>
+      <div class="btn-row">
+        <button class="btn btn-primary" id="btn-summarize">Summarize</button>
+        <button class="btn btn-primary" id="btn-reply">Reply</button>
+        <button class="btn btn-primary" id="btn-improve">Improve</button>
+      </div>
+    </section>
+
+    <!-- Loading spinner -->
+    <div id="spinner" class="hidden">
+      <div class="spinner-ring"></div>
+      <span>Thinking…</span>
+    </div>
+
+    <!-- Output area -->
+    <section id="output-section">
+      <div id="output-area" class="hidden"></div>
+      <button id="copy-btn" class="hidden">📋 Copy to clipboard</button>
+    </section>
+
+    <!-- Status bar for errors / info -->
+    <div id="status-bar"></div>
+  </body>
+</html>
