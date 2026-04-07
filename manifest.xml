@@ -26,10 +26,20 @@
 
   <!-- Requirements -->
   <Requirements>
-    <bt:Sets>
-      <bt:Set Name="Mailbox" MinVersion="1.1" />
-    </bt:Sets>
+    <Sets>
+      <Set Name="Mailbox" MinVersion="1.1" />
+    </Sets>
   </Requirements>
+
+  <!-- Form settings (required by schema before Permissions) -->
+  <FormSettings>
+    <Form xsi:type="ItemRead">
+      <DesktopSettings>
+        <SourceLocation DefaultValue="https://derekweitzel.com/Outlook-ai/taskpane.html" />
+        <RequestedHeight>250</RequestedHeight>
+      </DesktopSettings>
+    </Form>
+  </FormSettings>
 
   <!-- Permissions -->
   <Permissions>ReadWriteMailbox</Permissions>
@@ -74,7 +84,6 @@
                     <bt:Image size="80" resid="Icon.80x80" />
                   </Icon>
                   <Action xsi:type="ShowTaskpane">
-                    <TaskpaneId>ButtonId1</TaskpaneId>
                     <SourceLocation resid="Taskpane.Url" />
                   </Action>
                 </Control>
@@ -99,7 +108,6 @@
                     <bt:Image size="80" resid="Icon.80x80" />
                   </Icon>
                   <Action xsi:type="ShowTaskpane">
-                    <TaskpaneId>ButtonId2</TaskpaneId>
                     <SourceLocation resid="Taskpane.Url" />
                   </Action>
                 </Control>
