@@ -635,6 +635,9 @@
     }
   }
 }
+html {
+  font-size: 14px;
+}
 @property --tw-space-y-reverse {
   syntax: "*";
   inherits: false;
