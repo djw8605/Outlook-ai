@@ -1,0 +1,1 @@
+(()=>{"use strict";Office.onReady(()=>{}),globalThis.openTaskPane=function(e){e.completed()}})();
