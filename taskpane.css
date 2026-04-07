@@ -9,6 +9,10 @@
       "Courier New", monospace;
     --color-red-600: oklch(57.7% 0.245 27.325);
     --color-green-600: oklch(62.7% 0.194 149.214);
+    --color-emerald-50: oklch(97.9% 0.021 166.113);
+    --color-emerald-100: oklch(95% 0.052 163.051);
+    --color-emerald-200: oklch(90.5% 0.093 164.15);
+    --color-emerald-700: oklch(50.8% 0.118 165.612);
     --color-blue-50: oklch(97% 0.014 254.604);
     --color-blue-100: oklch(93.2% 0.032 255.585);
     --color-blue-200: oklch(88.2% 0.059 254.128);
@@ -215,6 +219,9 @@
   .start {
     inset-inline-start: var(--spacing);
   }
+  .end {
+    inset-inline-end: var(--spacing);
+  }
   .container {
     width: 100%;
     @media (width >= 40rem) {
@@ -326,6 +333,9 @@
   .gap-1 {
     gap: calc(var(--spacing) * 1);
   }
+  .gap-1\.5 {
+    gap: calc(var(--spacing) * 1.5);
+  }
   .gap-2 {
     gap: calc(var(--spacing) * 2);
   }
@@ -385,6 +395,9 @@
   .border-blue-200 {
     border-color: var(--color-blue-200);
   }
+  .border-emerald-200 {
+    border-color: var(--color-emerald-200);
+  }
   .border-gray-100 {
     border-color: var(--color-gray-100);
   }
@@ -402,6 +415,9 @@
   }
   .bg-blue-700 {
     background-color: var(--color-blue-700);
+  }
+  .bg-emerald-50 {
+    background-color: var(--color-emerald-50);
   }
   .bg-gray-50 {
     background-color: var(--color-gray-50);
@@ -496,6 +512,9 @@
   .text-blue-700 {
     color: var(--color-blue-700);
   }
+  .text-emerald-700 {
+    color: var(--color-emerald-700);
+  }
   .text-gray-300 {
     color: var(--color-gray-300);
   }
@@ -562,6 +581,13 @@
     &:hover {
       @media (hover: hover) {
         background-color: var(--color-blue-800);
+      }
+    }
+  }
+  .hover\:bg-emerald-100 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-emerald-100);
       }
     }
   }
