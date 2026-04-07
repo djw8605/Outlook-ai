@@ -204,6 +204,8 @@ h2 {
   margin-top: 10px;
   font-size: 12px;
   min-height: 18px;
+  white-space: pre-wrap;
+  word-break: break-word;
 }
 
 #status-bar.error {
