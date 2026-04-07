@@ -24,6 +24,13 @@
     <AppDomain>https://derekweitzel.com</AppDomain>
   </AppDomains>
 
+  <!-- Requirements -->
+  <Requirements>
+    <bt:Sets>
+      <bt:Set Name="Mailbox" MinVersion="1.1" />
+    </bt:Sets>
+  </Requirements>
+
   <!-- Permissions -->
   <Permissions>ReadWriteMailbox</Permissions>
 
