@@ -216,3 +216,10 @@ h2 {
   color: #107c10;
 }
 
+#version-label {
+  margin-top: 8px;
+  font-size: 11px;
+  color: #a19f9d;
+  text-align: right;
+}
+
